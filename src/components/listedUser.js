@@ -1,10 +1,11 @@
 import React from "react";
+import './user.css';
 
-function User(props) {
-    console.log('user props', props)
-    return <div onClick={props.clickHandler}>
-       ** {props.login} {props.count}
+function ListedUser(props) {
+    return <div className="user" onClick={props.clickHandler}>
+        <div className="username actionLink">{props.login}</div>
+        <img src={props.userProperties.avatar_url}/>
     </div>
 }
 
-export default User
+export default ListedUser

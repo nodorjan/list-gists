@@ -1,0 +1,23 @@
+.userList {
+    margin-top: 20px;
+}
+
+.user {
+    display: inline-flex;
+    margin: 0px 20px 20px 0px;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+
+.user img {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.user .username {
+    padding: 0px 12px;
+    align-self: center;
+}

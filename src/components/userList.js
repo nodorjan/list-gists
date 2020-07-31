@@ -1,35 +1,59 @@
 import React, {useState} from "react";
-import User from './user'
+import ListedUser from './listedUser'
 
-function Users(props) {
+function UserList(props) {
     const [list, setList] = useState({})
+    const [error, setError] = useState(null)
+    const [listLoading, setListLoading] = useState(false);
+    const [listLoaded, setListLoaded] = useState(false);
+
+    if (props.hidden) {
+        return null;
+    }
+    if (listLoading) {
+        return <div className="panel">Please, wait</div>
+    }
+
+
     const getUsers = () => {
+        setListLoading(true);
         props.getUsers().then(
             (u) => {
-                console.log("users.js", u);
                 setList(u);
+                setListLoading(false);
+                setListLoaded(true);
+            },
+            (e) => {
+                setError(e);
+                setListLoading(false);
+                setListLoaded(true);
             })
     }
+
+    if (!listLoading && !listLoaded) {
+        getUsers();
+    }
+
     let renderedUsers = [];
     for (let login in list) {
-        renderedUsers.push(<User
+        renderedUsers.push(<ListedUser
             key={login}
             login={login}
-            count={list[login].count}
-            clickHandler= { () => {props.userChange(login)}}
-            />);
+            userProperties = {list[login]}
+            clickHandler={() => {
+                props.changeUser(login);
+            }}
+        />);
     }
-    console.log('list', list.keys);
-    //let keys = list.keys();
-    //console.log(keys);
-    //let renderedList = list.values().map( (user) => (<div>{user.login}</div>))
     return (
-
-        <div>
-            <button onClick={getUsers}>get some users with gists</button>
-            { renderedUsers}
-
+        <div className="panel">
+            <div className="title">Some Git users who have gists to look at</div>
+            <div>Click on a user to see their public gists or
+                <button onClick={props.hideUserList}>Input user name</button></div>
+            <div className="userList">
+                {renderedUsers}
+            </div>
         </div>);
 }
 
-export {Users};
+export {UserList};
