@@ -37,6 +37,9 @@ The user list works for the demo version as well.
 
 I didn't find any way allowing pagination with the API that retrieves the gists of a user. I assumed that the list I receive is always complete. 
 
+I don't understand the requirement of limiting the listed forks to the first 3. It seems to me that
+all the forks get retrieved with a single call, why not expose them?
+
 I am not happy with making the viewer click on every gist to see the forks. As an 
 initial suggestion it might beat the 
 idea of starting a request with every single gist when the forks component loads; 

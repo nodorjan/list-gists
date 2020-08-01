@@ -18,13 +18,16 @@ function getForksForGists(gist) {
     })
 }
 
+const noGistAvatar = 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+const someGistAvatar = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/types-of-flowers-1579719085.jpg?crop=1.00xw:0.757xh;0,0.173xh&resize=980:*';
+
 function getUsersReturnValue() {
     return {
         noGist: {
-            avatar_url: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+            avatar_url: noGistAvatar
         },
         someGists: {
-            avatar_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/types-of-flowers-1579719085.jpg?crop=1.00xw:0.757xh;0,0.173xh&resize=980:*'
+            avatar_url: someGistAvatar
         }
     }
 }
@@ -76,7 +79,7 @@ function getGistsReturnValue(user) {
             "login": "forked",
             "id": 4583166,
             "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "avatar_url": someGistAvatar,
             "gravatar_id": "",
             "url": "https://api.github.com/users/RaulMedeiros",
             "html_url": "https://github.com/RaulMedeiros",
@@ -123,7 +126,7 @@ function getGistsReturnValue(user) {
                 "login": "unforked",
                 "id": 4583166,
                 "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-                "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+                "avatar_url": someGistAvatar,
                 "gravatar_id": "",
                 "url": "https://api.github.com/users/RaulMedeiros",
                 "html_url": "https://github.com/RaulMedeiros",
