@@ -1,12 +1,16 @@
 import React from 'react';
 
 function UserDisplay(props) {
-    if (!props.name) {
+    if (props.hidden) {
         return null;
     }
+    const avatar = props.avatar ?
+        <img src={props.avatar} className="userDisplayImage"/>
+        : null;
     return (
         <div className="panel">
-            <span className="titleSize">Gists for {props.name}</span>
+            {avatar}
+            <span className="titleSize">Gists for {props.user}</span>
             <button onClick={props.resetUser}>Select another user</button>
         </div>)
 }

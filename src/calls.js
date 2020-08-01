@@ -1,4 +1,4 @@
-import {getUsersDemo, getGistsForUserDemo} from "./demoCalls";
+import {getUsersDemo, getGistsForUserDemo, getForksForGistDemo} from "./demoCalls";
 
 /*
  *  The API calls used. To be able to see different scenarios that may or may not come up with live
@@ -112,6 +112,16 @@ function chooseGetGistsForUser(user) {
     }
 }
 
+function chooseGetForksForGist(gist) {
+    if (isDemo) {
+        return getForksForGistDemo(gist)
+    } else {
+        return getForksForGist(gist);
+    }
+}
+
 export {chooseGetUsers as getUsers,
-        chooseGetGistsForUser as getGistsForUser, getForksForGist, setIsDemo}
+        chooseGetGistsForUser as getGistsForUser,
+        chooseGetForksForGist as getForksForGist,
+        setIsDemo}
 

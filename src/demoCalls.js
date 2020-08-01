@@ -1,4 +1,4 @@
-const delay = 2700;
+const delay = 2100;
 
 function getUsers() {
     return new Promise((success, failure) => {
@@ -8,7 +8,13 @@ function getUsers() {
 
 function getGistsForUser(user) {
     return new Promise((success, failure) => {
-        setTimeout(() => success(getGistsReturnValue), delay);
+        setTimeout(() => success( () => getGistsReturnValue(user)), delay);
+    })
+}
+
+function getForksForGists(gist) {
+    return new Promise((success, failure) => {
+        setTimeout(() => success( () => getForksReturnValue(gist)), delay);
     })
 }
 
@@ -24,6 +30,7 @@ function getUsersReturnValue() {
 }
 
 function getGistsReturnValue(user) {
+    console.log(user);
     if (user === 'noGist') {
         return [];
     }
@@ -62,12 +69,12 @@ function getGistsReturnValue(user) {
         "public": true,
         "created_at": "2019-11-22T12:51:45Z",
         "updated_at": "2020-07-31T13:33:58Z",
-        "description": "",
+        "description": "some forks for you to check",
         "comments": 0,
         "user": null,
         "comments_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/comments",
         "owner": {
-            "login": "RaulMedeiros",
+            "login": "forked",
             "id": 4583166,
             "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
             "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
@@ -109,12 +116,12 @@ function getGistsReturnValue(user) {
             "public": true,
             "created_at": "2019-10-20T21:56:08Z",
             "updated_at": "2019-10-20T21:56:08Z",
-            "description": "Create Virtual Environments For Python With Conda",
+            "description": "Create Virtual Environments For Python With Conda --- with no forks",
             "comments": 0,
             "user": null,
             "comments_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/comments",
             "owner": {
-                "login": "RaulMedeiros",
+                "login": "unforked",
                 "id": 4583166,
                 "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
                 "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
@@ -139,4 +146,127 @@ function getGistsReturnValue(user) {
     ];
 }
 
-export {getUsers as getUsersDemo, getGistsForUser as getGistsForUserDemo}
+function getForksReturnValue(gist) {
+    if (gist.owner.login !== 'forked') {
+        return [];
+    }
+    return [
+        {
+            "url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a",
+            "forks_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/forks",
+            "commits_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/commits",
+            "id": "6646c2c6debed467da4d52020b673d6a",
+            "node_id": "MDQ6R2lzdDY2NDZjMmM2ZGViZWQ0NjdkYTRkNTIwMjBiNjczZDZh",
+            "git_pull_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "git_push_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "html_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a",
+            "files": {},
+            "public": true,
+            "created_at": "2020-07-31T13:33:58Z",
+            "updated_at": "2020-07-31T13:33:58Z",
+            "description": "",
+            "comments": 0,
+            "user": null,
+            "comments_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/comments",
+            "owner": {
+                "login": "nodorjan",
+                "id": 12472061,
+                "node_id": "MDQ6VXNlcjEyNDcyMDYx",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/12472061?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/nodorjan",
+                "html_url": "https://github.com/nodorjan",
+                "followers_url": "https://api.github.com/users/nodorjan/followers",
+                "following_url": "https://api.github.com/users/nodorjan/following{/other_user}",
+                "gists_url": "https://api.github.com/users/nodorjan/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/nodorjan/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/nodorjan/subscriptions",
+                "organizations_url": "https://api.github.com/users/nodorjan/orgs",
+                "repos_url": "https://api.github.com/users/nodorjan/repos",
+                "events_url": "https://api.github.com/users/nodorjan/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/nodorjan/received_events",
+                "type": "User",
+                "site_admin": false
+            }},{
+            "url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a",
+            "forks_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/forks",
+            "commits_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/commits",
+            "id": "6646c2c6debed467da4d52020b673d6a",
+            "node_id": "MDQ6R2lzdDY2NDZjMmM2ZGViZWQ0NjdkYTRkNTIwMjBiNjczZDZh",
+            "git_pull_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "git_push_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "html_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a",
+            "files": {},
+            "public": true,
+            "created_at": "2020-07-31T13:33:58Z",
+            "updated_at": "2020-07-31T13:33:58Z",
+            "description": "",
+            "comments": 0,
+            "user": null,
+            "comments_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/comments",
+            "owner": {
+                "login": "someNiceGuy",
+                "id": 12472061,
+                "node_id": "MDQ6VXNlcjEyNDcyMDYx",
+                "avatar_url": "    https://avatars2.githubusercontent.com/u/11302888?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/nodorjan",
+                "html_url": "https://github.com/nodorjan",
+                "followers_url": "https://api.github.com/users/nodorjan/followers",
+                "following_url": "https://api.github.com/users/nodorjan/following{/other_user}",
+                "gists_url": "https://api.github.com/users/nodorjan/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/nodorjan/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/nodorjan/subscriptions",
+                "organizations_url": "https://api.github.com/users/nodorjan/orgs",
+                "repos_url": "https://api.github.com/users/nodorjan/repos",
+                "events_url": "https://api.github.com/users/nodorjan/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/nodorjan/received_events",
+                "type": "User",
+                "site_admin": false
+            }
+
+        },
+        {
+            "url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a",
+            "forks_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/forks",
+            "commits_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/commits",
+            "id": "6646c2c6debed467da4d52020b673d6a",
+            "node_id": "MDQ6R2lzdDY2NDZjMmM2ZGViZWQ0NjdkYTRkNTIwMjBiNjczZDZh",
+            "git_pull_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "git_push_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
+            "html_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a",
+            "files": {},
+            "public": true,
+            "created_at": "2020-07-31T13:33:58Z",
+            "updated_at": "2020-07-31T13:33:58Z",
+            "description": "",
+            "comments": 0,
+            "user": null,
+            "comments_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/comments",
+            "owner": {
+                "login": "someOtherNiceGuy",
+                "id": 12472061333,
+                "node_id": "MDQ6VXNlcjEyNDcyMDYx",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/6882931?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/nodorjan",
+                "html_url": "https://github.com/nodorjan",
+                "followers_url": "https://api.github.com/users/nodorjan/followers",
+                "following_url": "https://api.github.com/users/nodorjan/following{/other_user}",
+                "gists_url": "https://api.github.com/users/nodorjan/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/nodorjan/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/nodorjan/subscriptions",
+                "organizations_url": "https://api.github.com/users/nodorjan/orgs",
+                "repos_url": "https://api.github.com/users/nodorjan/repos",
+                "events_url": "https://api.github.com/users/nodorjan/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/nodorjan/received_events",
+                "type": "User",
+                "site_admin": false
+            }
+
+        }
+
+    ];
+}
+
+export {getUsers as getUsersDemo, getGistsForUser as getGistsForUserDemo, getForksForGists as getForksForGistDemo}

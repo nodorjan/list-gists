@@ -1,6 +1,3 @@
-## Todo
-- look again at setupTests.js and App.test
-
 
 
 

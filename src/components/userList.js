@@ -42,7 +42,7 @@ function UserList(props) {
             login={login}
             userProperties = {list[login]}
             clickHandler={() => {
-                props.changeUser(login);
+                props.changeUser(login, list[login].avatar_url);
             }}
         />);
     }
