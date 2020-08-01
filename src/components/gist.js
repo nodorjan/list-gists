@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import {Badge} from './badge'
+import Badge from './badge'
 import Forks from './forks2'
+import {getForksForGist} from "../calls"
 import './gists.css'
 
 function Gist(props) {
@@ -21,15 +22,10 @@ function Gist(props) {
     let getMyForks = () => {
         setForksLoading(true);
         getForksForGist(gist).then((forks) => {
-            console.log(forks);
             setForksLoading(false);
             setForks(forks);
         });
     }
-    // types.values().forEach( (t) => {
-    //      console.log(t);
-    //      badges.push(<Badge filetype={t} key={t}/>)
-    //  });
 
     let forksPart = <div className="actionLink" onClick={getMyForks}>Get forks</div>;
     if (forksLoading) {
@@ -41,7 +37,11 @@ function Gist(props) {
 
     return (
         <div key={props.index} className="gist">
-            <a href={html_url} target={id}>{displayName} title="Open Gist"</a>
+            <a href={html_url}
+               target={'showGist' + id}
+               title="Open Gist">
+                {displayName}
+            </a>
             <div>{description}</div>
             File types : {badges}
             {forksPart}

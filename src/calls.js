@@ -1,3 +1,51 @@
+import {getUsersDemo, getGistsForUserDemo} from "./demoCalls";
+
+/*
+ *  The API calls used. To be able to see different scenarios that may or may not come up with live
+ *  data, you can use some demo calls with fake data. The parameter demo in the url decides whether
+ *  the real API gets called or we just return the handcoded test data
+ */
+
+let isDemo = false;
+
+// to be called as the first thing when the page loads.
+function setIsDemo(href) {
+    let query = (href.split('?'))[1];
+    if (!query) {
+        return;
+    }
+    let pieces = query.split('&');
+    pieces.forEach((p) => {
+        const [name, value] = p.split('=');
+        if (name === 'demo') {
+            isDemo = true;
+        }
+    })
+}
+
+/*
+ * Real API calls
+ */
+
+function getUsers() {
+    return new Promise(
+        (success, failure) => {
+            fetch('https://api.github.com/gists/public').then(
+                (response) => {
+                    response.json().then((j) => {
+                        let owners = {};
+                        j.forEach((gist) => {
+                            let login = gist.owner.login;
+                            owners[login] = gist.owner;
+                        })
+                        success(owners)
+                    });
+                }
+            )
+        }
+    );
+}
+
 function getGistsForUser(user) {
     return new Promise(
         function (success, failure) {
@@ -28,17 +76,13 @@ function getGistsForUser(user) {
 }
 
 function getForksForGist(gist) {
-    let url = gist.forks_url;
-   //url = 'https://api.github.com/gists/8098d939ee597dd3eed87ac768a62075/forks';
-   // url = 'https://api.github.com/gists/367fe5b8d29b99d4dad5/forks';
     return new Promise(
         function (success, failure) {
-            fetch(url).then(
+            fetch(gist.forks_url).then(
                 (response) => {
-                    response.json().then((d)=>{
-                        console.log("forks" , d);
+                    response.json().then((d) => {
                         success(d)
-                    }, (e)=>{
+                    }, (e) => {
                         failure(e)
                     })
                 },
@@ -49,83 +93,25 @@ function getForksForGist(gist) {
         })
 }
 
-function getUsers() {
-    return new Promise(
-        (success, failure) => {
-            fetch('https://api.github.com/gists/public').then(
-                (response) => {
-                    response.json().then((j) => {
-                        let owners = {};
-                        j.forEach( (gist) => {
-                            let login = gist.owner.login;
-                            owners[login] = gist.owner;
-                        })
-                        success(owners)});
-                }
-            )
-        }
-    );
+/*
+ * Choosing the live or demo version
+ */
+function chooseGetUsers() {
+    if (isDemo) {
+        return getUsersDemo();
+    } else {
+        return getUsers();
+    }
 }
 
-//     if (response.status === 200) {
-//         response.json().then(
-//             (data) => {
-//                 success(data)
-//             },
-//             (error) => {
-//                 failure(error)
-//             }) else {
-//         }
-//     }
-//     }
-// }
-
-
-export {getGistsForUser, getForksForGist, getUsers}
-
-// https://gist.github.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453
-
-/*
-[
-    {
-        "url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a",
-        "forks_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/forks",
-        "commits_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/commits",
-        "id": "6646c2c6debed467da4d52020b673d6a",
-        "node_id": "MDQ6R2lzdDY2NDZjMmM2ZGViZWQ0NjdkYTRkNTIwMjBiNjczZDZh",
-        "git_pull_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
-        "git_push_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
-        "html_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a",
-        "files": {
-
-        },
-        "public": true,
-        "created_at": "2020-07-31T13:33:58Z",
-        "updated_at": "2020-07-31T13:33:58Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/6646c2c6debed467da4d52020b673d6a/comments",
-        "owner": {
-            "login": "nodorjan",
-            "id": 12472061,
-            "node_id": "MDQ6VXNlcjEyNDcyMDYx",
-            "avatar_url": "https://avatars1.githubusercontent.com/u/12472061?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/nodorjan",
-            "html_url": "https://github.com/nodorjan",
-            "followers_url": "https://api.github.com/users/nodorjan/followers",
-            "following_url": "https://api.github.com/users/nodorjan/following{/other_user}",
-            "gists_url": "https://api.github.com/users/nodorjan/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/nodorjan/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/nodorjan/subscriptions",
-            "organizations_url": "https://api.github.com/users/nodorjan/orgs",
-            "repos_url": "https://api.github.com/users/nodorjan/repos",
-            "events_url": "https://api.github.com/users/nodorjan/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/nodorjan/received_events",
-            "type": "ListedUser",
-            "site_admin": false
-        }
+function chooseGetGistsForUser(user) {
+    if (isDemo) {
+        return getGistsForUserDemo(user)
+    } else {
+        return getGistsForUser(user);
     }
-]
-*/
+}
+
+export {chooseGetUsers as getUsers,
+        chooseGetGistsForUser as getGistsForUser, getForksForGist, setIsDemo}
+

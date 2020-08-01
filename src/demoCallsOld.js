@@ -1,536 +1,4 @@
-const lotsofGists = [
-    {
-        "url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453",
-        "forks_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/forks",
-        "commits_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/commits",
-        "id": "4c393311af17bb17a1b495fa4dbaf453",
-        "node_id": "MDQ6R2lzdDRjMzkzMzExYWYxN2JiMTdhMWI0OTVmYTRkYmFmNDUz",
-        "git_pull_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453.git",
-        "git_push_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453.git",
-        "html_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453",
-        "files": {
-            "list of lists into a single list": {
-                "filename": "list of lists into a single list",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
-                "size": 277
-            },
-            "image added": {
-                "filename": "list of lists into a single list",
-                "type": "image/gif",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
-                "size": 277
-            },
-            "other image added" : {
-                "filename": "list of lists into a single list",
-                "type": "image/gif",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
-                "size": 277
-            }
-        },
-        "public": true,
-        "created_at": "2019-11-22T12:51:45Z",
-        "updated_at": "2020-07-31T13:33:58Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183",
-        "forks_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/forks",
-        "commits_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/commits",
-        "id": "a3c7e0376b5e31a9694d02b29919e183",
-        "node_id": "MDQ6R2lzdGEzYzdlMDM3NmI1ZTMxYTk2OTRkMDJiMjk5MTllMTgz",
-        "git_pull_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183.git",
-        "git_push_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183.git",
-        "html_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183",
-        "files": {
-            "Create Virtual Environments For Python With Conda": {
-                "filename": "Create Virtual Environments For Python With Conda",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/a3c7e0376b5e31a9694d02b29919e183/raw/623e358cf7d87ff6bf6edd7d598fa7b373267820/Create%20Virtual%20Environments%20For%20Python%20With%20Conda",
-                "size": 707
-            }
-        },
-        "public": true,
-        "created_at": "2019-10-20T21:56:08Z",
-        "updated_at": "2019-10-20T21:56:08Z",
-        "description": "Create Virtual Environments For Python With Conda",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697",
-        "forks_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/forks",
-        "commits_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/commits",
-        "id": "df51aba5c6e7a664b47969714ceed697",
-        "node_id": "MDQ6R2lzdGRmNTFhYmE1YzZlN2E2NjRiNDc5Njk3MTRjZWVkNjk3",
-        "git_pull_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697.git",
-        "git_push_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697.git",
-        "html_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697",
-        "files": {
-            "http.client": {
-                "filename": "http.client",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/df51aba5c6e7a664b47969714ceed697/raw/7cead9932557d69fdedc2a6e60e2a10058ccf849/http.client",
-                "size": 3038
-            }
-        },
-        "public": true,
-        "created_at": "2019-09-04T15:28:53Z",
-        "updated_at": "2019-09-04T15:29:17Z",
-        "description": "",
-        "comments": 1,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db",
-        "forks_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/forks",
-        "commits_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/commits",
-        "id": "cd06865c28477b90ed268e04ec8770db",
-        "node_id": "MDQ6R2lzdGNkMDY4NjVjMjg0NzdiOTBlZDI2OGUwNGVjODc3MGRi",
-        "git_pull_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db.git",
-        "git_push_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db.git",
-        "html_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db",
-        "files": {
-            "Flask test endpoints": {
-                "filename": "Flask test endpoints",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/cd06865c28477b90ed268e04ec8770db/raw/16b584566057b4857e9b64a811395fc06a02c2ed/Flask%20test%20endpoints",
-                "size": 392
-            }
-        },
-        "public": true,
-        "created_at": "2019-08-29T14:32:43Z",
-        "updated_at": "2019-08-29T14:34:08Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff",
-        "forks_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/forks",
-        "commits_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/commits",
-        "id": "2de8009a448d6edc814a5a4fe445f6ff",
-        "node_id": "MDQ6R2lzdDJkZTgwMDlhNDQ4ZDZlZGM4MTRhNWE0ZmU0NDVmNmZm",
-        "git_pull_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff.git",
-        "git_push_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff.git",
-        "html_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff",
-        "files": {
-            "palette": {
-                "filename": "palette",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/2de8009a448d6edc814a5a4fe445f6ff/raw/c76cf61e94cccc905d294a570511a1ed2075a714/palette",
-                "size": 406
-            }
-        },
-        "public": true,
-        "created_at": "2019-04-11T19:53:56Z",
-        "updated_at": "2019-04-11T19:53:57Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6",
-        "forks_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/forks",
-        "commits_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/commits",
-        "id": "7194f7c4751416055a68dd310a5469a6",
-        "node_id": "MDQ6R2lzdDcxOTRmN2M0NzUxNDE2MDU1YTY4ZGQzMTBhNTQ2OWE2",
-        "git_pull_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6.git",
-        "git_push_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6.git",
-        "html_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6",
-        "files": {
-            "gistfile1.txt": {
-                "filename": "gistfile1.txt",
-                "type": "text/plain",
-                "language": "Text",
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/7194f7c4751416055a68dd310a5469a6/raw/482ee1b39c8cce721d0f51c2071c33b39e2cd2fa/gistfile1.txt",
-                "size": 870
-            }
-        },
-        "public": true,
-        "created_at": "2019-04-02T20:14:16Z",
-        "updated_at": "2019-04-02T20:14:16Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f",
-        "forks_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/forks",
-        "commits_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/commits",
-        "id": "7bed1b1eb690d4c2d76d225959387c3f",
-        "node_id": "MDQ6R2lzdDdiZWQxYjFlYjY5MGQ0YzJkNzZkMjI1OTU5Mzg3YzNm",
-        "git_pull_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f.git",
-        "git_push_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f.git",
-        "html_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f",
-        "files": {
-            "database_python_sample": {
-                "filename": "database_python_sample",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/7bed1b1eb690d4c2d76d225959387c3f/raw/c72d35b918117c99bc5b62c7449856dae4e545ac/database_python_sample",
-                "size": 685
-            }
-        },
-        "public": true,
-        "created_at": "2018-10-22T13:33:03Z",
-        "updated_at": "2018-10-22T13:34:30Z",
-        "description": "database_python_sample",
-        "comments": 1,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e",
-        "forks_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/forks",
-        "commits_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/commits",
-        "id": "32af6cd2cd91d64fe7013afb8cc19c8e",
-        "node_id": "MDQ6R2lzdDMyYWY2Y2QyY2Q5MWQ2NGZlNzAxM2FmYjhjYzE5Yzhl",
-        "git_pull_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e.git",
-        "git_push_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e.git",
-        "html_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e",
-        "files": {
-            "rtsp_link": {
-                "filename": "rtsp_link",
-                "type": "text/plain",
-                "language": null,
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/32af6cd2cd91d64fe7013afb8cc19c8e/raw/c876e086c9b75c520e7c0ac2907ec041d3401196/rtsp_link",
-                "size": 183
-            }
-        },
-        "public": true,
-        "created_at": "2018-10-14T21:48:42Z",
-        "updated_at": "2018-10-14T21:48:42Z",
-        "description": "",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70",
-        "forks_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/forks",
-        "commits_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/commits",
-        "id": "cad9e76c79fac5f1209aa1509b3e1b70",
-        "node_id": "MDQ6R2lzdGNhZDllNzZjNzlmYWM1ZjEyMDlhYTE1MDliM2UxYjcw",
-        "git_pull_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70.git",
-        "git_push_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70.git",
-        "html_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70",
-        "files": {
-            "gistfile1.txt": {
-                "filename": "gistfile1.txt",
-                "type": "text/plain",
-                "language": "Text",
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/cad9e76c79fac5f1209aa1509b3e1b70/raw/c37558bfea63bd37796ea3912a985fb4bf433df2/gistfile1.txt",
-                "size": 489
-            }
-        },
-        "public": true,
-        "created_at": "2018-10-05T17:46:31Z",
-        "updated_at": "2018-10-05T17:46:31Z",
-        "description": "docker install ubuntu",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1",
-        "forks_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/forks",
-        "commits_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/commits",
-        "id": "a3173a35b10eebcc5e121e187fcd4ed1",
-        "node_id": "MDQ6R2lzdGEzMTczYTM1YjEwZWViY2M1ZTEyMWUxODdmY2Q0ZWQx",
-        "git_pull_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1.git",
-        "git_push_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1.git",
-        "html_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1",
-        "files": {
-            "gistfile1.txt": {
-                "filename": "gistfile1.txt",
-                "type": "text/plain",
-                "language": "Text",
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/a3173a35b10eebcc5e121e187fcd4ed1/raw/b693e26f0680619b6194ffe349daba87b6ea0242/gistfile1.txt",
-                "size": 399
-            }
-        },
-        "public": true,
-        "created_at": "2018-10-04T21:09:54Z",
-        "updated_at": "2018-10-19T01:50:59Z",
-        "description": "argparse_samples",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    },
-    {
-        "url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d",
-        "forks_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/forks",
-        "commits_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/commits",
-        "id": "f9cdcbfda24022e03c347b49ce04f03d",
-        "node_id": "MDQ6R2lzdGY5Y2RjYmZkYTI0MDIyZTAzYzM0N2I0OWNlMDRmMDNk",
-        "git_pull_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d.git",
-        "git_push_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d.git",
-        "html_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d",
-        "files": {
-            "gistfile1.txt": {
-                "filename": "gistfile1.txt",
-                "type": "text/plain",
-                "language": "Text",
-                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/f9cdcbfda24022e03c347b49ce04f03d/raw/5460861fbb5a38e954ddb55e61959b8e2112b85f/gistfile1.txt",
-                "size": 197
-            }
-        },
-        "public": true,
-        "created_at": "2018-09-19T16:55:57Z",
-        "updated_at": "2018-09-19T16:58:59Z",
-        "description": "Load DCM file with pydicom",
-        "comments": 0,
-        "user": null,
-        "comments_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/comments",
-        "owner": {
-            "login": "RaulMedeiros",
-            "id": 4583166,
-            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/RaulMedeiros",
-            "html_url": "https://github.com/RaulMedeiros",
-            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
-            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
-            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
-            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
-            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
-            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
-            "type": "User",
-            "site_admin": false
-        },
-        "truncated": false
-    }
-]
+
 
 const forks =
     [
@@ -543,9 +11,7 @@ const forks =
             "git_pull_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
             "git_push_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a.git",
             "html_url": "https://gist.github.com/6646c2c6debed467da4d52020b673d6a",
-            "files": {
-
-            },
+            "files": {},
             "public": true,
             "created_at": "2020-07-31T13:33:58Z",
             "updated_at": "2020-07-31T13:33:58Z",
@@ -575,16 +41,16 @@ const forks =
             }
         }
 
-]
+    ]
 
 function getUsers() {
-    return new Promise( (success, failure) => {
+    return new Promise((success, failure) => {
         let successFunction = () => {
-            success( {
-                noGist : {
+            success({
+                noGist: {
                     avatar_url: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
                 },
-                myLord : {
+                myLord: {
                     avatar_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/types-of-flowers-1579719085.jpg?crop=1.00xw:0.757xh;0,0.173xh&resize=980:*'
                 }
             })
@@ -595,19 +61,19 @@ function getUsers() {
 
 function getForksForGist(gist) {
     console.log(gist);
-    return new Promise( (success, failure) => {
+    return new Promise((success, failure) => {
         let successFunction = () => {
-            success (
+            success(
                 forks
-            //     [
-            //     {   id: '90980980',
-            //         html_url: 'http://dilbert.com',
-            //         owner: {
-            //             login: 'mermaid',
-            //             owner_avatar_url: 'https://cdn.shopify.com/s/files/1/0765/0807/products/Mermaid_Wall_Decals_grande.png?v=1536093675'
-            //         }
-            //     }
-            // ]
+                //     [
+                //     {   id: '90980980',
+                //         html_url: 'http://dilbert.com',
+                //         owner: {
+                //             login: 'mermaid',
+                //             owner_avatar_url: 'https://cdn.shopify.com/s/files/1/0765/0807/products/Mermaid_Wall_Decals_grande.png?v=1536093675'
+                //         }
+                //     }
+                // ]
             )
         }
         setTimeout(successFunction, 2000)
@@ -617,8 +83,8 @@ function getForksForGist(gist) {
 
 function getGistsForUser(user) {
     console.log(user);
-    return new Promise(function (success,failure) {
-        let returnValue = lotsofGists;
+    return new Promise(function (success, failure) {
+        let returnValue = [];
         //     [ {
         //     "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
         //     "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
@@ -670,28 +136,29 @@ function getGistsForUser(user) {
         setTimeout(successFunction, 2000);
     })
 }
-    // {
-    //     fetch('https://api.github.com/users/rxavierffs/gists').then(
-    //         (response) => {
-    //             if (response.status === 200) {
-    //
-    //             }
-    //             console.log(response);
-    //             response.json().then((j) => {
-    //                 console.log(j)
-    //             })
-    //         }
-    //     )
-    // }
 
-    // fetch('https://api.github.com/gists/623e8450d9234f86a29477e9373c081d/forks').then(
-    //     (response ) => {
-    //         response.json().then( (j) => { console.log(j)})
-    //     }
-    // )
+// {
+//     fetch('https://api.github.com/users/rxavierffs/gists').then(
+//         (response) => {
+//             if (response.status === 200) {
+//
+//             }
+//             console.log(response);
+//             response.json().then((j) => {
+//                 console.log(j)
+//             })
+//         }
+//     )
+// }
+
+// fetch('https://api.github.com/gists/623e8450d9234f86a29477e9373c081d/forks').then(
+//     (response ) => {
+//         response.json().then( (j) => { console.log(j)})
+//     }
+// )
 
 
-export {getGistsForUser, getUsers, getForksForGist}
+
 
 /*
 [
@@ -2273,3 +1740,547 @@ forks
 
 
  */
+
+
+
+
+const lotOfGists = [
+    {
+        "url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453",
+        "forks_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/forks",
+        "commits_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/commits",
+        "id": "4c393311af17bb17a1b495fa4dbaf453",
+        "node_id": "MDQ6R2lzdDRjMzkzMzExYWYxN2JiMTdhMWI0OTVmYTRkYmFmNDUz",
+        "git_pull_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453.git",
+        "git_push_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453.git",
+        "html_url": "https://gist.github.com/4c393311af17bb17a1b495fa4dbaf453",
+        "files": {
+            "list of lists into a single list": {
+                "filename": "list of lists into a single list",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
+                "size": 277
+            },
+            "image added": {
+                "filename": "list of lists into a single list",
+                "type": "image/gif",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
+                "size": 277
+            },
+            "other image added": {
+                "filename": "list of lists into a single list",
+                "type": "image/gif",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/4c393311af17bb17a1b495fa4dbaf453/raw/df3f5a5ce54a8562386877f7ca18eaa2c6cd1642/list%20of%20lists%20into%20a%20single%20list",
+                "size": 277
+            }
+        },
+        "public": true,
+        "created_at": "2019-11-22T12:51:45Z",
+        "updated_at": "2020-07-31T13:33:58Z",
+        "description": "",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/4c393311af17bb17a1b495fa4dbaf453/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183",
+        "forks_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/forks",
+        "commits_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/commits",
+        "id": "a3c7e0376b5e31a9694d02b29919e183",
+        "node_id": "MDQ6R2lzdGEzYzdlMDM3NmI1ZTMxYTk2OTRkMDJiMjk5MTllMTgz",
+        "git_pull_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183.git",
+        "git_push_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183.git",
+        "html_url": "https://gist.github.com/a3c7e0376b5e31a9694d02b29919e183",
+        "files": {
+            "Create Virtual Environments For Python With Conda": {
+                "filename": "Create Virtual Environments For Python With Conda",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/a3c7e0376b5e31a9694d02b29919e183/raw/623e358cf7d87ff6bf6edd7d598fa7b373267820/Create%20Virtual%20Environments%20For%20Python%20With%20Conda",
+                "size": 707
+            }
+        },
+        "public": true,
+        "created_at": "2019-10-20T21:56:08Z",
+        "updated_at": "2019-10-20T21:56:08Z",
+        "description": "Create Virtual Environments For Python With Conda",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/a3c7e0376b5e31a9694d02b29919e183/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697",
+        "forks_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/forks",
+        "commits_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/commits",
+        "id": "df51aba5c6e7a664b47969714ceed697",
+        "node_id": "MDQ6R2lzdGRmNTFhYmE1YzZlN2E2NjRiNDc5Njk3MTRjZWVkNjk3",
+        "git_pull_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697.git",
+        "git_push_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697.git",
+        "html_url": "https://gist.github.com/df51aba5c6e7a664b47969714ceed697",
+        "files": {
+            "http.client": {
+                "filename": "http.client",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/df51aba5c6e7a664b47969714ceed697/raw/7cead9932557d69fdedc2a6e60e2a10058ccf849/http.client",
+                "size": 3038
+            }
+        },
+        "public": true,
+        "created_at": "2019-09-04T15:28:53Z",
+        "updated_at": "2019-09-04T15:29:17Z",
+        "description": "",
+        "comments": 1,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/df51aba5c6e7a664b47969714ceed697/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db",
+        "forks_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/forks",
+        "commits_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/commits",
+        "id": "cd06865c28477b90ed268e04ec8770db",
+        "node_id": "MDQ6R2lzdGNkMDY4NjVjMjg0NzdiOTBlZDI2OGUwNGVjODc3MGRi",
+        "git_pull_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db.git",
+        "git_push_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db.git",
+        "html_url": "https://gist.github.com/cd06865c28477b90ed268e04ec8770db",
+        "files": {
+            "Flask test endpoints": {
+                "filename": "Flask test endpoints",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/cd06865c28477b90ed268e04ec8770db/raw/16b584566057b4857e9b64a811395fc06a02c2ed/Flask%20test%20endpoints",
+                "size": 392
+            }
+        },
+        "public": true,
+        "created_at": "2019-08-29T14:32:43Z",
+        "updated_at": "2019-08-29T14:34:08Z",
+        "description": "",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/cd06865c28477b90ed268e04ec8770db/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff",
+        "forks_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/forks",
+        "commits_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/commits",
+        "id": "2de8009a448d6edc814a5a4fe445f6ff",
+        "node_id": "MDQ6R2lzdDJkZTgwMDlhNDQ4ZDZlZGM4MTRhNWE0ZmU0NDVmNmZm",
+        "git_pull_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff.git",
+        "git_push_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff.git",
+        "html_url": "https://gist.github.com/2de8009a448d6edc814a5a4fe445f6ff",
+        "files": {
+            "palette": {
+                "filename": "palette",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/2de8009a448d6edc814a5a4fe445f6ff/raw/c76cf61e94cccc905d294a570511a1ed2075a714/palette",
+                "size": 406
+            }
+        },
+        "public": true,
+        "created_at": "2019-04-11T19:53:56Z",
+        "updated_at": "2019-04-11T19:53:57Z",
+        "description": "",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/2de8009a448d6edc814a5a4fe445f6ff/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6",
+        "forks_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/forks",
+        "commits_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/commits",
+        "id": "7194f7c4751416055a68dd310a5469a6",
+        "node_id": "MDQ6R2lzdDcxOTRmN2M0NzUxNDE2MDU1YTY4ZGQzMTBhNTQ2OWE2",
+        "git_pull_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6.git",
+        "git_push_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6.git",
+        "html_url": "https://gist.github.com/7194f7c4751416055a68dd310a5469a6",
+        "files": {
+            "gistfile1.txt": {
+                "filename": "gistfile1.txt",
+                "type": "text/plain",
+                "language": "Text",
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/7194f7c4751416055a68dd310a5469a6/raw/482ee1b39c8cce721d0f51c2071c33b39e2cd2fa/gistfile1.txt",
+                "size": 870
+            }
+        },
+        "public": true,
+        "created_at": "2019-04-02T20:14:16Z",
+        "updated_at": "2019-04-02T20:14:16Z",
+        "description": "",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/7194f7c4751416055a68dd310a5469a6/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f",
+        "forks_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/forks",
+        "commits_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/commits",
+        "id": "7bed1b1eb690d4c2d76d225959387c3f",
+        "node_id": "MDQ6R2lzdDdiZWQxYjFlYjY5MGQ0YzJkNzZkMjI1OTU5Mzg3YzNm",
+        "git_pull_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f.git",
+        "git_push_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f.git",
+        "html_url": "https://gist.github.com/7bed1b1eb690d4c2d76d225959387c3f",
+        "files": {
+            "database_python_sample": {
+                "filename": "database_python_sample",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/7bed1b1eb690d4c2d76d225959387c3f/raw/c72d35b918117c99bc5b62c7449856dae4e545ac/database_python_sample",
+                "size": 685
+            }
+        },
+        "public": true,
+        "created_at": "2018-10-22T13:33:03Z",
+        "updated_at": "2018-10-22T13:34:30Z",
+        "description": "database_python_sample",
+        "comments": 1,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/7bed1b1eb690d4c2d76d225959387c3f/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e",
+        "forks_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/forks",
+        "commits_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/commits",
+        "id": "32af6cd2cd91d64fe7013afb8cc19c8e",
+        "node_id": "MDQ6R2lzdDMyYWY2Y2QyY2Q5MWQ2NGZlNzAxM2FmYjhjYzE5Yzhl",
+        "git_pull_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e.git",
+        "git_push_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e.git",
+        "html_url": "https://gist.github.com/32af6cd2cd91d64fe7013afb8cc19c8e",
+        "files": {
+            "rtsp_link": {
+                "filename": "rtsp_link",
+                "type": "text/plain",
+                "language": null,
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/32af6cd2cd91d64fe7013afb8cc19c8e/raw/c876e086c9b75c520e7c0ac2907ec041d3401196/rtsp_link",
+                "size": 183
+            }
+        },
+        "public": true,
+        "created_at": "2018-10-14T21:48:42Z",
+        "updated_at": "2018-10-14T21:48:42Z",
+        "description": "",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/32af6cd2cd91d64fe7013afb8cc19c8e/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70",
+        "forks_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/forks",
+        "commits_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/commits",
+        "id": "cad9e76c79fac5f1209aa1509b3e1b70",
+        "node_id": "MDQ6R2lzdGNhZDllNzZjNzlmYWM1ZjEyMDlhYTE1MDliM2UxYjcw",
+        "git_pull_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70.git",
+        "git_push_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70.git",
+        "html_url": "https://gist.github.com/cad9e76c79fac5f1209aa1509b3e1b70",
+        "files": {
+            "gistfile1.txt": {
+                "filename": "gistfile1.txt",
+                "type": "text/plain",
+                "language": "Text",
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/cad9e76c79fac5f1209aa1509b3e1b70/raw/c37558bfea63bd37796ea3912a985fb4bf433df2/gistfile1.txt",
+                "size": 489
+            }
+        },
+        "public": true,
+        "created_at": "2018-10-05T17:46:31Z",
+        "updated_at": "2018-10-05T17:46:31Z",
+        "description": "docker install ubuntu",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/cad9e76c79fac5f1209aa1509b3e1b70/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1",
+        "forks_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/forks",
+        "commits_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/commits",
+        "id": "a3173a35b10eebcc5e121e187fcd4ed1",
+        "node_id": "MDQ6R2lzdGEzMTczYTM1YjEwZWViY2M1ZTEyMWUxODdmY2Q0ZWQx",
+        "git_pull_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1.git",
+        "git_push_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1.git",
+        "html_url": "https://gist.github.com/a3173a35b10eebcc5e121e187fcd4ed1",
+        "files": {
+            "gistfile1.txt": {
+                "filename": "gistfile1.txt",
+                "type": "text/plain",
+                "language": "Text",
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/a3173a35b10eebcc5e121e187fcd4ed1/raw/b693e26f0680619b6194ffe349daba87b6ea0242/gistfile1.txt",
+                "size": 399
+            }
+        },
+        "public": true,
+        "created_at": "2018-10-04T21:09:54Z",
+        "updated_at": "2018-10-19T01:50:59Z",
+        "description": "argparse_samples",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/a3173a35b10eebcc5e121e187fcd4ed1/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    },
+    {
+        "url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d",
+        "forks_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/forks",
+        "commits_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/commits",
+        "id": "f9cdcbfda24022e03c347b49ce04f03d",
+        "node_id": "MDQ6R2lzdGY5Y2RjYmZkYTI0MDIyZTAzYzM0N2I0OWNlMDRmMDNk",
+        "git_pull_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d.git",
+        "git_push_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d.git",
+        "html_url": "https://gist.github.com/f9cdcbfda24022e03c347b49ce04f03d",
+        "files": {
+            "gistfile1.txt": {
+                "filename": "gistfile1.txt",
+                "type": "text/plain",
+                "language": "Text",
+                "raw_url": "https://gist.githubusercontent.com/RaulMedeiros/f9cdcbfda24022e03c347b49ce04f03d/raw/5460861fbb5a38e954ddb55e61959b8e2112b85f/gistfile1.txt",
+                "size": 197
+            }
+        },
+        "public": true,
+        "created_at": "2018-09-19T16:55:57Z",
+        "updated_at": "2018-09-19T16:58:59Z",
+        "description": "Load DCM file with pydicom",
+        "comments": 0,
+        "user": null,
+        "comments_url": "https://api.github.com/gists/f9cdcbfda24022e03c347b49ce04f03d/comments",
+        "owner": {
+            "login": "RaulMedeiros",
+            "id": 4583166,
+            "node_id": "MDQ6VXNlcjQ1ODMxNjY=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/4583166?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/RaulMedeiros",
+            "html_url": "https://github.com/RaulMedeiros",
+            "followers_url": "https://api.github.com/users/RaulMedeiros/followers",
+            "following_url": "https://api.github.com/users/RaulMedeiros/following{/other_user}",
+            "gists_url": "https://api.github.com/users/RaulMedeiros/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/RaulMedeiros/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/RaulMedeiros/subscriptions",
+            "organizations_url": "https://api.github.com/users/RaulMedeiros/orgs",
+            "repos_url": "https://api.github.com/users/RaulMedeiros/repos",
+            "events_url": "https://api.github.com/users/RaulMedeiros/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/RaulMedeiros/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "truncated": false
+    }
+]
+
+function gistsForUser(user) {
+
+}
+
+
+export {getUsers, getGistsForUser,  getForksForGist}

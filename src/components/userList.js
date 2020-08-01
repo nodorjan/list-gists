@@ -1,23 +1,24 @@
 import React, {useState} from "react";
-import ListedUser from './listedUser'
+import ListedUser from './listedUser';
+import {getUsers} from '../calls';
 
 function UserList(props) {
-    const [list, setList] = useState({})
-    const [error, setError] = useState(null)
+    const [list, setList] = useState({});
+    const [error, setError] = useState(null);
     const [listLoading, setListLoading] = useState(false);
     const [listLoaded, setListLoaded] = useState(false);
 
     if (props.hidden) {
         return null;
     }
+
     if (listLoading) {
         return <div className="panel">Please, wait</div>
     }
 
-
-    const getUsers = () => {
+    const getCurrentUsers = () => {
         setListLoading(true);
-        props.getUsers().then(
+        getUsers().then(
             (u) => {
                 setList(u);
                 setListLoading(false);
@@ -31,7 +32,7 @@ function UserList(props) {
     }
 
     if (!listLoading && !listLoaded) {
-        getUsers();
+        getCurrentUsers();
     }
 
     let renderedUsers = [];

@@ -13,4 +13,4 @@ function Badge(props) {
         </div>
 }
 
-export {Badge};
+export default Badge;

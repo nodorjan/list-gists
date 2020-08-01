@@ -15,7 +15,6 @@ function GistList(props) {
                     <Gist
                         gist={gist}
                         key={index}
-                        getForksForGist={props.getForksForGist}
                     />))
             return (<div className="panel gistlist">
                 {renderedList}

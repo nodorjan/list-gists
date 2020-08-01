@@ -3,12 +3,14 @@ import GistList from "./gistList";
 import UserInput from './userInput';
 import UserDisplay from './userDisplay'
 import {UserList} from './userList'
-import {getGistsForUser,getForksForGist, getUsers} from "../fakeCalls";
+import {getGistsForUser} from "../calls";
 
 function Page() {
-    const [loadingList, setLoadingList] = useState(false);
     const [user, setUser] = useState('');
-    const [userListOpen, setUserListOpen] = useState(false)
+
+    const [userListOpen, setUserListOpen] = useState(false);
+
+    const [loadingList, setLoadingList] = useState(false);
     const [list, setList] = useState(null);
     const [error, setError] = useState(null);
 
@@ -46,33 +48,18 @@ function Page() {
         setUserListOpen(false);
     }
 
-
-
     return (
         <div>
-            <UserInput      hidden={ user || userListOpen }
-                            changeUser={changeUser}
-                            showUserList={showUserList}/>
-            <UserList       hidden={ user || !userListOpen }
-                            getUsers={getUsers}
-                            changeUser={changeUser}
-                            hideUserList={hideUserList}/>
-            <UserDisplay    hidden={!user} name={user}
-                            resetUser={resetUser} />
-            <GistList       hidden={!user}
-                            list={list} error={error}
-                            getForksForGist={getForksForGist}/>
+            {/* Enter user login name */}
+            <UserInput hidden={user || userListOpen} changeUser={changeUser} showUserList={showUserList}/>
+            {/* Present a list of users to select from */}
+            <UserList hidden={user || !userListOpen} changeUser={changeUser} hideUserList={hideUserList}/>
+            {/* Show selected / entered user */}
+            <UserDisplay hidden={!user} name={user} resetUser={resetUser}/>
+            {/* Show gists for the user */}
+            <GistList hidden={!user} list={list} error={error}/>
         </div>
     )
-
-    // return (
-    //     <div>
-    //         <UserList getUsers={getUsers} userChange={userChanged}/>
-    //         <Username changeHandler={userChanged} resetHandler={userReset}/>
-    //         { loading?  <div>wait</div> : null}
-    //         { user.length > 0  ?
-    //             <GistList list={list} error={error} getForksForGist={getForksForGist}/> : null}
-    // </div>);
 }
 
 export default Page;
