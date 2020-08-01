@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ListedUser from './listedUser';
 import {getUsers} from '../calls';
 
@@ -14,6 +14,10 @@ function UserList(props) {
 
     if (listLoading) {
         return <div className="panel">Please, wait</div>
+    }
+
+    if (error) {
+        return <div className="panel error">{error}</div>
     }
 
     const getCurrentUsers = () => {

@@ -16,7 +16,7 @@ function setIsDemo(href) {
     }
     let pieces = query.split('&');
     pieces.forEach((p) => {
-        const [name, value] = p.split('=');
+        const [name] = p.split('=');
         if (name === 'demo') {
             isDemo = true;
         }
@@ -70,7 +70,8 @@ function getGistsForUser(user) {
                         }
                         failure(error);
                     }
-                }
+                },
+                (error) => failure(error)
             )
         });
 }

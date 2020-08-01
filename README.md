@@ -10,7 +10,9 @@ then (from the project folder)
 
 This will start the app on `localhost:3000`
 
-To run the app on demo / test data instead of live, add a query parameter named demo: `localhost:3000?demo=yes`
+To run the app on demo / test data instead of live, add a query parameter named demo: 
+
+`localhost:3000?demo=yes`
 
 ## Testing
 

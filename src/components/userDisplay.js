@@ -5,7 +5,7 @@ function UserDisplay(props) {
         return null;
     }
     const avatar = props.avatar ?
-        <img src={props.avatar} className="userDisplayImage"/>
+        <img src={props.avatar} className="userDisplayImage" alt={props.user}/>
         : null;
     return (
         <div className="panel">

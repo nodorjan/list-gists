@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import Badges from './badges2'
 import Forks from './forks2'
 import './gists.css'
@@ -9,7 +9,8 @@ function Gist(props) {
     const fileValues = Object.values(files);
     const display = fileValues.length > 0 ? fileValues[0].filename : id;
 
-    props.setAvatar(gist.owner.avatar_url);
+    useEffect( () => {props.setAvatar(gist.owner.avatar_url)});
+
     return (
         <div className="gist">
              <a href={html_url}

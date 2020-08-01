@@ -30,7 +30,6 @@ function getUsersReturnValue() {
 }
 
 function getGistsReturnValue(user) {
-    console.log(user);
     if (user === 'noGist') {
         return [];
     }
