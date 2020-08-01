@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-import Badges from './badges2'
-import Forks from './forks2'
+import Badges from './badges'
+import Forks from './forks'
 import './gists.css'
 
 function Gist(props) {
