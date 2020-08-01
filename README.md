@@ -23,7 +23,7 @@ and demoed.
 
 For conversations with the UX or the business person, 
 more demo cases could be added to `src\demoCalls.js`. I 
-didn't really try to be complete here/
+didn't try to be complete here.
 
 The input of the GitHub user name should be improved in some way. My temporary 
 solution for quicker development, demo and qa is a user list 

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import GistList from "./gistList";
 import UserInput from './userInput';
 import UserDisplay from './userDisplay'
-import {UserList} from './userList'
+import UserList from './userList'
 
 function Page() {
     const [user, setUser] = useState(null);
@@ -28,7 +28,7 @@ function Page() {
     }
 
     const resetUser = () => {
-        // waiting for the viewer to enter or select a user name
+        // waiting for the viewer to enter or select a user
         setUser(null);
         setAvatar(null);
         setUserListOpen(false);

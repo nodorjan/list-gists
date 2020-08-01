@@ -61,4 +61,4 @@ function UserList(props) {
         </div>);
 }
 
-export {UserList};
+export default UserList;

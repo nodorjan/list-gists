@@ -2,13 +2,12 @@
     padding: 30px;
 }
 
-.panel .title {
+.panel .title, .panel .titleSize {
     font-size: 16px;
-    margin-bottom: 15px;
 }
 
-.panel .titleSize {
-    font-size: 16px;
+.panel .title {
+    margin-bottom: 15px;
 }
 
 body {
@@ -24,7 +23,7 @@ button {
 }
 
 .error {
-    color: #bb0000;
+    color: #cc0000;
 }
 
 a, .actionLink {

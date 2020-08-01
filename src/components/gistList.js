@@ -3,7 +3,7 @@ import Gist from './gist';
 import {getGistsForUser} from "../calls";
 
 function GistList(props) {
-    const [user, setUser] = useState();
+    const [prevUser, setPrevUser] = useState(null);
     const [loading, setLoading] = useState(false);
     const [list, setList] = useState(null);
     const [error, setError] = useState(null);
@@ -12,12 +12,13 @@ function GistList(props) {
 
     function catchUserChange() {
         if (!props.user) {
+            setPrevUser(null);
             return;
         }
-        if (props.user === user) {
+        if (props.user === prevUser) {
             return;
         }
-        setUser(props.user);
+        setPrevUser(props.user);
         setLoading(true);
         setList(null);
         setError(null);
@@ -33,7 +34,7 @@ function GistList(props) {
         )
     }
 
-    if (props.hidden) {  // aka !user, it's just easier to read
+    if (props.hidden) {  // aka !user, the prop name is just for readability
         return null;
     }
     if (loading) {
@@ -43,7 +44,7 @@ function GistList(props) {
         return <div className="panel error">{error}</div>
     }
     if (!Array.isArray(list)) {
-        return null;   // don't think it happens at this point
+        return null;   // don't think it happens
     }
     if (list.length === 0) {
         return <div className="panel">No gists to display</div>

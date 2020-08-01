@@ -2,7 +2,7 @@ import {getUsersDemo, getGistsForUserDemo, getForksForGistDemo} from "./demoCall
 
 /*
  *  The API calls used. To be able to see different scenarios that may or may not come up with live
- *  data, you can use some demo calls with fake data. The parameter demo in the url decides whether
+ *  data, you can use some demo calls with fake data. The parameter "demo" in the url decides whether
  *  the real API gets called or we just return the handcoded test data
  */
 
@@ -125,4 +125,3 @@ export {chooseGetUsers as getUsers,
         chooseGetGistsForUser as getGistsForUser,
         chooseGetForksForGist as getForksForGist,
         setIsDemo}
-

@@ -7,8 +7,9 @@ function Gist(props) {
     const gist = props.gist;
     const {id, html_url, files, description} = gist;
     const fileValues = Object.values(files);
-    const display = fileValues.length > 0 ? fileValues[0].filename : id;
+    const displayName = fileValues.length > 0 ? fileValues[0].filename : id;
 
+    // show the user avatar in the header if it is available
     useEffect( () => {props.setAvatar(gist.owner.avatar_url)});
 
     return (
@@ -16,7 +17,7 @@ function Gist(props) {
              <a href={html_url}
                target={'showGist' + id}
                title="Open Gist">
-                {display}
+                {displayName}
             </a>
             <div className="description">{description}</div>
             <Badges files={fileValues}/>

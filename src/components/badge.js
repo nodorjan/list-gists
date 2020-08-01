@@ -10,7 +10,7 @@ function Badge(props) {
         <span>
             {pieces[1]}
         </span>
-        </div>
+    </div>
 }
 
 export default Badge;
