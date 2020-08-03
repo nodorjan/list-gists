@@ -1,3 +1,5 @@
+This is a SPA displaying information about the public Gists of the selected Github user.
+
 ## Start the application
 
 Clone `https://github.com/nodorjan/list-gists.git`
